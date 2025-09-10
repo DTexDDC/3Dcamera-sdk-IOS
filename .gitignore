@@ -1,0 +1,48 @@
+//
+//  .gitignore
+//  MyDetectObject
+//
+//  Created by Surya on 10/9/2025.
+//
+# Xcode
+*.xcworkspace
+*.xcuserstate
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/
+
+# Build products
+build/
+DerivedData/
+*.app
+*.ipa
+*.dSYM
+*.o
+*.so
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/
+
+# User-specific files
+*.swp
+*.lock
+*.moved-aside
+*.orig
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+*.log
