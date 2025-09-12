@@ -24,21 +24,21 @@ struct HostContentView: View {
                     .font(.title)
 
                 Button("Launch SDK") {
-                    let file1 = "/path/to/file1.tflite"   // Have a proper file path from the ios device.
-                    let file2 = "/path/to/file2.txt"
+//                    let file1 = "/path/to/file1.tflite"   // Have a proper file path from the ios device.
+//                    let file2 = "/path/to/file2.txt"
                     
-                    // Ignore the commented code below as I used it to test without apis.
-//                    guard let file1URL = copyFileFromBundleToDevice(fileName: "output_float32", fileExtension: "tflite") else {
-//                        print("Failed to load model")
-//                        return
-//                    }
-//                    let file1 = file1URL.path()
-//                    
-//                    guard let file2URL = copyFileFromBundleToDevice(fileName: "output_float32_labels", fileExtension: "txt") else {
-//                        print("Failed to load model")
-//                        return
-//                    }
-//                    let file2 = file2URL.path()
+//                     Ignore the commented code below as I used it to test without apis.
+                    guard let file1URL = copyFileFromBundleToDevice(fileName: "output_float32", fileExtension: "tflite") else {
+                        print("Failed to load model")
+                        return
+                    }
+                    let file1 = file1URL.path()
+                    
+                    guard let file2URL = copyFileFromBundleToDevice(fileName: "output_float32_labels", fileExtension: "txt") else {
+                        print("Failed to load model")
+                        return
+                    }
+                    let file2 = file2URL.path()
 
                     sdk.start(modelPath: file1, textPath: URL(fileURLWithPath: file2)) { payload in
 //                        print("📩 Received SDK event: \(payload)")
